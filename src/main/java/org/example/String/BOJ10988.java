@@ -1,6 +1,6 @@
-package org.example.basic;
+package org.example.String;
 
-import java.io.*;
+import java.util.Scanner;
 
 /*
 * https://www.acmicpc.net/problem/10988
@@ -12,17 +12,25 @@ import java.io.*;
 * EI 1 2
 * EO 3
 * */
-public class BOJ10988MK2 {
+public class BOJ10988 {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringBuilder sb = new StringBuilder(br.readLine());
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String word = scanner.next();
+        scanner.close();
+        StringBuilder compareWord = new StringBuilder();
 
-        bw.write(((sb.toString().equals(sb.reverse().toString())) ? 1 : 0) + "\n");
-        bw.flush();
-        bw.close();
-        br.close();
+
+        for (int i=word.length() - 1;i>= 0;i--){
+            compareWord.append(word.charAt(i));
+        }
+
+
+        if(compareWord.toString().equals(word)){
+            System.out.println("1");
+        }else{
+            System.out.println("0");
+        }
 
     }
 }

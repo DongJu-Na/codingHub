@@ -1,4 +1,4 @@
-package org.example.basic;
+package org.example.Math;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -18,8 +18,6 @@ public class BOJ10818 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] arr = new int[n];
-        int minNum = 0;
-        int maxNum = 0;
 
         for (int i =0; i < n; i++){
             arr[i] = scanner.nextInt();
